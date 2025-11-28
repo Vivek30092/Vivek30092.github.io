@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Vivek</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Event specific styles */
+        .event-card {
+            background: var(--bg-card);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .event-card {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .event-date-box {
+                min-width: 150px;
+                text-align: center;
+                padding: 2rem;
+                border-right: 1px solid rgba(255, 255, 255, 0.05);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .event-content {
+                padding: 2rem;
+                flex: 1;
+            }
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-purple);
+            box-shadow: 0 0 20px rgba(188, 19, 254, 0.1);
+        }
+
+        .event-date-box {
+            background: rgba(188, 19, 254, 0.05);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .event-day {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--neon-blue);
+            line-height: 1;
+        }
+
+        .event-month {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+        }
+
+        .event-year {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+        }
+
+        .event-type {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            background: rgba(0, 243, 255, 0.1);
+            color: var(--neon-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .event-location {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Vivek<span>.</span></a>
+            <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="events.html" class="nav-link active">Events</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <h2 class="section-title reveal">Attended Events</h2>
+            <p class="reveal"
+                style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                A collection of hackathons, workshops, and tech conferences I've participated in to stay updated with
+                the latest trends.
+            </p>
+
+            <div class="events-list reveal">
+
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-day">16</div>
+                        <div class="event-month">Nov</div>
+                        <div class="event-year">2025</div>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-type">Workshop</span>
+                        <h3>Google Cloud GenAI Workshop</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">
+                            Hands-on workshop exploring Vertex AI and Gemini models. Learned about prompt engineering
+                            and deploying LLMs on Google Cloud Platform.
+                        </p>
+                        <div class="event-location">
+                            <i class="fa-solid fa-location-dot"></i> Indore, MP
+                            <button class="linkdin_btn">view on LinkedIn </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-day">15</div>
+                        <div class="event-month">Nov</div>
+                        <div class="event-year">2025</div>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-type">Event</span>
+                        <h3>Prelude to DevFest</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">
+                            Prelude to DevFest 2k25 Event.
+                        </p>
+                        <div class="event-location">
+                            <i class="fa-solid fa-video"></i> Virtual Event
+                            <button class="linkdin_btn">view on LinkedIn </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-day">13</div>
+                        <div class="event-month">Aug</div>
+                        <div class="event-year">2025</div>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-type">Conference</span>
+                        <h3>Microsoft AI Summit</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">
+                             hands-on sessions and demos around GitHub Copilot, Azure AI Services, and Retrieval-Augmented Generation (RAG), to deep discussions on how these tools can shape the next generation of intelligent applications
+                        </p>
+                        <div class="event-location">
+                            <i class="fa-solid fa-location-dot"></i> Noida, India
+                            <button class="linkdin_btn">view on LinkedIn </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4
+                <div class="event-card">
+                    <div class="event-date-box">
+                        <div class="event-day">05</div>
+                        <div class="event-month">Dec</div>
+                        <div class="event-year">2023</div>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-type">Competition</span>
+                        <h3>CodeWars Coding Contest</h3>
+                        <p style="color: var(--text-muted); margin-top: 0.5rem;">
+                            Secured top 10 rank in the inter-college coding competition. Solved complex algorithmic
+                            problems using Python and C++.
+                        </p>
+                        <div class="event-location">
+                            <i class="fa-solid fa-building-columns"></i> University Campus
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Vivek. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="scroll-top"><i class="fa-solid fa-arrow-up"></i></div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
