@@ -12,6 +12,54 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Fix centering for section title */
+    .section-title {
+      position: relative !important;
+      left: auto !important;
+      transform: none !important;
+      display: table !important;
+      margin: 0 auto 3rem auto !important;
+      text-align: center !important;
+      width: fit-content !important;
+    }
+
+    /* Marquee Animation */
+    .marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      animation: scroll 20s linear infinite;
+    }
+
+    .marquee-content:hover {
+      animation-play-state: paused;
+    }
+
+    .skill-card {
+      display: inline-block;
+      margin: 0 20px;
+      vertical-align: middle;
+      min-width: 150px;
+      /* Ensure cards have width */
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-33.33%);
+        /* Move by 1/3 since we have 3 sets */
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -60,7 +108,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-img-container reveal">
-          <img src="assets/images/profile-placeholder.jpg" alt="Vivek" class="about-img">
+          <img src="assets/images/profile-placeholder.png" alt="Vivek" class="about-img">
           <div class="about-img-glow"></div>
         </div>
         <div class="about-text reveal">
@@ -79,31 +127,78 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section" style="background: var(--bg-secondary);">
-    <div class="container">
+  <!-- Skills Section (Marquee) -->
+  <section id="skills" class="section" style="background: var(--bg-secondary); overflow: hidden;">
+    <div class="container" style="max-width: 100%;">
       <h2 class="section-title reveal">My Tech Stack</h2>
-      <div class="skills-container reveal">
-        <div class="skill-card">
-          <i class="fa-brands fa-python skill-icon"></i>
-          <div class="skill-name">Python</div>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-brain skill-icon"></i>
-          <div class="skill-name">Machine Learning</div>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-html5 skill-icon"></i>
-          <div class="skill-name">Web Dev</div>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-eye skill-icon"></i>
-          <div class="skill-name">OpenCV</div>
-        </div>
-        <!-- added by me -->
-         <div class="skill-card">
-          <i class="fa-solid fa-apple skill-icon"></i>
-          <div class="skill-name">Kali Linux</div>
+
+      <div class="marquee-wrapper reveal">
+        <div class="marquee-content">
+          <!-- Set 1 -->
+          <div class="skill-card">
+            <i class="fa-brands fa-python skill-icon"></i>
+            <div class="skill-name">Python</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-brain skill-icon"></i>
+            <div class="skill-name">Machine Learning</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-html5 skill-icon"></i>
+            <div class="skill-name">Web Dev</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-eye skill-icon"></i>
+            <div class="skill-name">OpenCV</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-apple skill-icon"></i>
+            <div class="skill-name">Kali Linux</div>
+          </div>
+
+          <!-- Set 2 -->
+          <div class="skill-card">
+            <i class="fa-brands fa-python skill-icon"></i>
+            <div class="skill-name">Python</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-brain skill-icon"></i>
+            <div class="skill-name">Machine Learning</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-html5 skill-icon"></i>
+            <div class="skill-name">Web Dev</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-eye skill-icon"></i>
+            <div class="skill-name">OpenCV</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-apple skill-icon"></i>
+            <div class="skill-name">Kali Linux</div>
+          </div>
+
+          <!-- Set 3 -->
+          <div class="skill-card">
+            <i class="fa-brands fa-python skill-icon"></i>
+            <div class="skill-name">Python</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-brain skill-icon"></i>
+            <div class="skill-name">Machine Learning</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-html5 skill-icon"></i>
+            <div class="skill-name">Web Dev</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-eye skill-icon"></i>
+            <div class="skill-name">OpenCV</div>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-apple skill-icon"></i>
+            <div class="skill-name">Kali Linux</div>
+          </div>
         </div>
       </div>
     </div>

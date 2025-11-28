@@ -7,6 +7,35 @@
     <title>About Me | Vivek</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Fix centering for section title */
+        .section-title {
+            position: relative !important;
+            left: auto !important;
+            transform: none !important;
+            display: table !important;
+            margin: 0 auto 3rem auto !important;
+            text-align: center !important;
+            width: fit-content !important;
+        }
+
+        /* Alternating Slide Animations */
+        .reveal.slide-left {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        .reveal.slide-right {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+
+        .reveal.slide-left.active,
+        .reveal.slide-right.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,7 +93,7 @@
                 </div>
 
                 <div class="about-img-container reveal">
-                    <img src="assets/images/profile-placeholder.jpg" alt="Vivek" class="about-img">
+                    <img src="assets/images/profile-placeholder.png" alt="Vivek" class="about-img">
                     <div class="about-img-glow"></div>
                 </div>
             </div>
@@ -74,69 +103,71 @@
     <!-- Skills Section -->
     <section class="section bg-card">
         <div class="container">
-            <h1 class="section-title reveal">Technical Skills</h1><br>
+            <h2 class="section-title reveal">Technical Skills</h2>
 
-            <h1 class="reveal" style="margin-bottom: 2rem; text-align: center;">AI & Machine Learning</h1>
-            <div class="skills-container reveal" style="margin-bottom: 4rem;">
-                <div class="skill-card">
-                    <i class="fa-brands fa-python skill-icon"></i>
-                    <div class="skill-name">Python</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%"></div>
-                    </div>
+            <div class="skills-container" style="margin-top: 3rem;">
+                <!-- 1. Programming Languages -->
+                <div class="skill-card reveal slide-left">
+                    <i class="fa-solid fa-code skill-icon"></i>
+                    <div class="skill-name">Programming Languages</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">Python, Java, JavaScript,
+                        C/C++, SQL, etc.</p>
                 </div>
-                <div class="skill-card">
+
+                <!-- 2. AI & Machine Learning -->
+                <div class="skill-card reveal slide-right">
                     <i class="fa-solid fa-brain skill-icon"></i>
-                    <div class="skill-name">Machine Learning</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%"></div>
-                    </div>
+                    <div class="skill-name">AI & Machine Learning</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">Machine Learning, Deep
+                        Learning, NLP, Computer Vision, Generative AI, Model Deployment.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fa-solid fa-eye skill-icon"></i>
-                    <div class="skill-name">OpenCV</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-solid fa-table skill-icon"></i>
-                    <div class="skill-name">Pandas & NumPy</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%"></div>
-                    </div>
-                </div>
-            </div>
 
-            <h1 class="reveal" style="margin-bottom: 2rem; text-align: center;">Web Development</h1>
-            <div class="skills-container reveal">
-                <div class="skill-card">
-                    <i class="fa-brands fa-html5 skill-icon"></i>
-                    <div class="skill-name">HTML & CSS</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%"></div>
-                    </div>
+                <!-- 3. Frameworks & Libraries -->
+                <div class="skill-card reveal slide-left">
+                    <i class="fa-solid fa-layer-group skill-icon"></i>
+                    <div class="skill-name">Frameworks & Libraries</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">TensorFlow, PyTorch,
+                        Scikit-Learn, OpenCV, NumPy, Pandas, Matplotlib, face_recognition, etc.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-js skill-icon"></i>
-                    <div class="skill-name">JavaScript</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%"></div>
-                    </div>
+
+                <!-- 4. Cloud & DevOps -->
+                <div class="skill-card reveal slide-right">
+                    <i class="fa-solid fa-cloud skill-icon"></i>
+                    <div class="skill-name">Cloud & DevOps</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">Google Cloud, Azure, AWS,
+                        Docker, GitHub Actions, CI/CD, Linux.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-git-alt skill-icon"></i>
-                    <div class="skill-name">Git & GitHub</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%"></div>
-                    </div>
+
+                <!-- 5. Web Development -->
+                <div class="skill-card reveal slide-left">
+                    <i class="fa-solid fa-globe skill-icon"></i>
+                    <div class="skill-name">Web Development</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">HTML, CSS, JavaScript,
+                        React, Node.js, REST APIs, Express.js.</p>
                 </div>
-                <div class="skill-card">
-                    <i class="fa-brands fa-react skill-icon"></i>
-                    <div class="skill-name">React (Basic)</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 60%"></div>
-                    </div>
+
+                <!-- 6. Databases -->
+                <div class="skill-card reveal slide-right">
+                    <i class="fa-solid fa-database skill-icon"></i>
+                    <div class="skill-name">Databases</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">MySQL, MongoDB,
+                        PostgreSQL, Firebase.</p>
+                </div>
+
+                <!-- 7. Tools & Platforms -->
+                <div class="skill-card reveal slide-left">
+                    <i class="fa-solid fa-tools skill-icon"></i>
+                    <div class="skill-name">Tools & Platforms</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">Git/GitHub, VS Code,
+                        Jupyter Notebook, Postman, Figma, Canva.</p>
+                </div>
+
+                <!-- 8. Software Engineering Concepts -->
+                <div class="skill-card reveal slide-right">
+                    <i class="fa-solid fa-cogs skill-icon"></i>
+                    <div class="skill-name">Software Engineering Concepts</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">OOP, Data Structures &
+                        Algorithms, System Design basics, OS fundamentals.</p>
                 </div>
             </div>
         </div>
