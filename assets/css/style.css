@@ -1057,3 +1057,25 @@ footer {
     font-size: 0.9rem;
     line-height: 1.5;
 }
+
+/* LinkedIn Button */
+.linkdin_btn {
+    display: inline-block;
+    padding: 6px 16px;
+    background: transparent;
+    border: 1px solid #0077b5; /* LinkedIn Blue */
+    color: #0077b5;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.linkdin_btn:hover {
+    background: #0077b5;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 119, 181, 0.4);
+}
