@@ -28,7 +28,6 @@
     <section class="section" style="padding-top: 120px;">
         <div class="container">
             <h2 class="section-title reveal">Get In Touch</h2>
-
             <div class="contact-wrapper reveal">
                 <div class="contact-info">
                     <h3 style="margin-bottom: 2rem;">Let's Connect</h3>
@@ -62,21 +61,30 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" action="https://formsubmit.co/vivekkumarc934@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://vivek30092.github.io/contact.html">
+                    <input type="hidden" name="_subject" value="New Submission from Portfolio!">
+
                     <div class="form-group">
-                        <label for="name" style="display: block; margin-bottom: 0.5rem;">Name</label>
-                        <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                        <label for="name" style="display: block; margin-bottom: 0.5rem;">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Full Name"
+                            required>
                     </div>
                     <div class="form-group">
-                        <label for="email" style="display: block; margin-bottom: 0.5rem;">Email</label>
-                        <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+                        <label for="email" style="display: block; margin-bottom: 0.5rem;">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Your Email Address"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="message" style="display: block; margin-bottom: 0.5rem;">Message</label>
-                        <textarea id="message" class="form-input" rows="5" placeholder="Your Message"
+                        <textarea id="message" name="message" class="form-input" rows="5" placeholder="Your Message"
                             required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-glow" style="width: 100%;">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-glow" style="width: 100%;">Send Message <i
+                            class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
                 </form>
             </div>
         </div>

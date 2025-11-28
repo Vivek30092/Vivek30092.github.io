@@ -1063,7 +1063,8 @@ footer {
     display: inline-block;
     padding: 6px 16px;
     background: transparent;
-    border: 1px solid #0077b5; /* LinkedIn Blue */
+    border: 1px solid #0077b5;
+    /* LinkedIn Blue */
     color: #0077b5;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -1078,4 +1079,24 @@ footer {
     background: #0077b5;
     color: white;
     box-shadow: 0 0 10px rgba(0, 119, 181, 0.4);
+}
+
+/* Form Enhancements */
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 5px rgba(0, 243, 255, 0.2);
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+.form-group:focus-within label {
+    color: var(--neon-purple);
 }
