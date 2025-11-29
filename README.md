@@ -10,6 +10,7 @@ portfolio/
 ├── about.html          # About Me, Journey & Skills
 ├── projects.html       # Project Cards with Filtering & Modals
 ├── certifications.html # Certifications Grid
+├── events.html         # Attended Events & Workshops
 ├── contact.html        # Contact Form & Socials
 ├── assets/
 │   ├── css/
@@ -29,6 +30,7 @@ portfolio/
     -   **Project Filtering**: Filter projects by category (AI/ML, Web Dev).
     -   **Modals**: Click "View Details" to see more info about a project without leaving the page.
     -   **Skill Bars**: Animated progress bars for technical skills.
+    -   **Event Timeline**: Showcase of workshops, hackathons, and conferences attended.
 -   **Clean Code**: Modular HTML files and organized assets.
 
 ## 🚀 How to Run Locally
@@ -53,7 +55,12 @@ portfolio/
 -   Open `certifications.html`.
 -   Add new `.cert-card` divs.
 
-### 4. Images
+### 4. Events
+-   Open `events.html`.
+-   Duplicate the `.event-card` block.
+-   Update the date, title, description, and location.
+
+### 5. Images
 -   Place your profile picture as `assets/images/profile.jpg`.
 -   Update the `src` in `index.html` and `about.html`.
 
