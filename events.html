@@ -19,7 +19,7 @@
             border-radius: 15px;
             overflow: hidden;
             margin-bottom: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
             transition: var(--transition-normal);
             display: flex;
             flex-direction: column;
@@ -35,7 +35,7 @@
                 min-width: 150px;
                 text-align: center;
                 padding: 2rem;
-                border-right: 1px solid rgba(255, 255, 255, 0.05);
+                border-right: 1px solid var(--border-color);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -239,6 +239,11 @@
             <p>&copy; 2025 Vivek. Made by <i class="fa-solid fa-heart" style="color: red;"></i></p>
         </div>
     </footer>
+
+    <!-- Floating Theme Toggle -->
+    <button class="theme-toggle theme-toggle-floating" aria-label="Toggle Theme">
+        <i class="fa-solid fa-sun"></i>
+    </button>
 
     <div class="scroll-top"><i class="fa-solid fa-arrow-up"></i></div>
     <script src="assets/js/script.js"></script>

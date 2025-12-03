@@ -1,5 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Theme Toggle ---
+    // --- Theme Toggle ---
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Check local storage
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        htmlElement.setAttribute('data-theme', currentTheme);
+        themeToggles.forEach(toggle => {
+            const icon = toggle.querySelector('i');
+            if (currentTheme === 'light' && icon) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    }
+
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const theme = htmlElement.getAttribute('data-theme');
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            // Update all toggle icons
+            themeToggles.forEach(t => {
+                const icon = t.querySelector('i');
+                if (icon) {
+                    if (newTheme === 'light') {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                    } else {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                    }
+                }
+            });
+        });
+    });
+
     // --- Mobile Menu Toggle ---
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
