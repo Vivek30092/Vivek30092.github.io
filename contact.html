@@ -20,24 +20,24 @@
             <a href="index.html" class="logo">Vivek<span>.</span></a>
             <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-                <li><a href="events.html" class="nav-link">Events</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+                <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link" data-i18n="nav_certifications">Certifications</a>
+                </li>
+                <li><a href="events.html" class="nav-link" data-i18n="nav_events">Events</a></li>
+                <li><a href="contact.html" class="nav-link active" data-i18n="nav_contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <section class="section contact-section">
         <div class="container">
-            <h2 class="contact-section-title reveal">Get In Touch</h2>
-
+            <h2 class="contact-section-title reveal" data-i18n="contact_title">Get In Touch</h2>
             <div class="contact-wrapper reveal">
                 <div class="contact-info">
-                    <h3 class="contact-subtitle">Let's Connect</h3>
-                    <p class="contact-desc">
+                    <h3 class="contact-subtitle" data-i18n="contact_subtitle">Let's Connect</h3>
+                    <p class="contact-desc" data-i18n="contact_desc">
                         I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
                         I'll try my best to get back to you!
                     </p>
@@ -45,7 +45,7 @@
                     <div class="contact-info-item">
                         <i class="fa-solid fa-envelope contact-icon"></i>
                         <div>
-                            <h3 class="contact-subtitle">Email</h3>
+                            <h3 class="contact-subtitle" data-i18n="contact_email">Email</h3>
                             <a href="mailto:vivekkumarc934@gmail.com">
                                 vivekkumarc934@gmail.com
                             </a>
@@ -55,7 +55,7 @@
                     <div class="contact-info-item">
                         <i class="fa-brands fa-linkedin contact-icon"></i>
                         <div>
-                            <h3 class="contact-subtitle">LinkedIn</h3>
+                            <h3 class="contact-subtitle" data-i18n="contact_linkedin">LinkedIn</h3>
                             <a href="https://linkedin.com/in/choudharyvivek1430" target="_blank">
                                 choudharyvivek1430
                             </a>
@@ -65,7 +65,7 @@
                     <div class="contact-info-item">
                         <i class="fa-brands fa-github contact-icon"></i>
                         <div>
-                            <h3 class="contact-subtitle">GitHub</h3>
+                            <h3 class="contact-subtitle" data-i18n="contact_github">GitHub</h3>
                             <a href="https://github.com/Vivek30092" target="_blank">
                                 Vivek30092
                             </a>
@@ -82,22 +82,22 @@
                     <input type="hidden" name="_subject" value="New Submission from Portfolio!">
 
                     <div class="form-group">
-                        <label for="name">Full Name</label>
+                        <label for="name" data-i18n="form_name">Full Name</label>
                         <input type="text" id="name" name="name" class="form-input" placeholder="Your Full Name"
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email" data-i18n="form_email">Email Address</label>
                         <input type="email" id="email" name="email" class="form-input" placeholder="Your Email Address"
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message" data-i18n="form_message">Message</label>
                         <textarea id="message" name="message" class="form-input" rows="8" placeholder="Your Message"
                             required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-glow btn-full">Send Message <i
-                            class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
+                    <button type="submit" class="btn btn-primary btn-glow btn-full" data-i18n="form_btn_send">Send
+                        Message <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
                 </form>
             </div>
         </div>
@@ -116,13 +116,19 @@
                         class="fa-brands fa-microsoft"></i></a>
                 <a href="mailto:vivekkumarc934@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <p>&copy; 2025 Vivek. Made by <i class="fa-solid fa-heart" style="color: red;"></i></p>
+            <p>&copy; 2025 <span data-i18n="footer_made_by">Vivek. Made by</span> <i class="fa-solid fa-heart"
+                    style="color: red;"></i></p>
         </div>
     </footer>
 
     <!-- Floating Theme Toggle -->
     <button class="theme-toggle theme-toggle-floating" aria-label="Toggle Theme">
         <i class="fa-solid fa-sun"></i>
+    </button>
+
+    <!-- Floating Language Toggle -->
+    <button class="lang-toggle lang-toggle-floating" aria-label="Toggle Language">
+        EN
     </button>
 
     <div class="scroll-top"><i class="fa-solid fa-arrow-up"></i></div>

@@ -67,6 +67,8 @@
     --bg-navbar: rgba(255, 255, 255, 0.85);
 }
 
+
+
 /* Reset */
 * {
     margin: 0;
@@ -829,6 +831,36 @@ footer {
     border-color: var(--neon-blue);
     box-shadow: 0 0 20px var(--neon-glow-blue);
     transform: rotate(15deg);
+}
+
+/* Floating Language Toggle */
+.lang-toggle-floating {
+    position: fixed;
+    bottom: 30px;
+    left: 85px;
+    /* Positioned next to theme toggle */
+    background: var(--bg-card);
+    color: var(--text-main);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: var(--transition-normal);
+    font-weight: bold;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+}
+
+.lang-toggle-floating:hover {
+    color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-glow-blue);
 }
 
 /* Responsive */

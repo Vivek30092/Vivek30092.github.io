@@ -74,12 +74,12 @@
       <a href="index.html" class="logo">Vivek<span>.</span></a>
       <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
       <ul class="nav-links">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-        <li><a href="events.html" class="nav-link">Events</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+        <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="certifications.html" class="nav-link" data-i18n="nav_certifications">Certifications</a></li>
+        <li><a href="events.html" class="nav-link" data-i18n="nav_events">Events</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -89,17 +89,18 @@
     <div class="hero-bg"></div>
     <div class="container hero-content">
       <div class="hero-text">
-        <h2 class="reveal">Hello, I'm</h2>
+        <h2 class="reveal" data-i18n="hero_greeting">Hello, I'm</h2>
         <h1 class="reveal gradient-text">Vivek</h1>
-        <h2 class="reveal">B.Tech CS–AIML Student & Developer</h2>
+        <h2 class="reveal" data-i18n="hero_role">B.Tech CS–AIML Student & Developer</h2>
       </div>
-      <p class="reveal" style="max-width: 600px; margin: 0 auto 2rem; color: var(--text-muted);">
+      <p class="reveal" style="max-width: 600px; margin: 0 auto 2rem; color: var(--text-muted);" data-i18n="hero_desc">
         Building intelligent systems and beautiful web interfaces. Passionate about Artificial Intelligence, Machine
         Learning, and Full Stack Development.
       </p>
       <div class="cta-buttons reveal">
-        <a href="projects.html" class="btn btn-primary btn-glow">View Projects</a>
-        <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
+        <a href="projects.html" class="btn btn-primary btn-glow" data-i18n="hero_btn_projects">View Projects</a>
+        <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero_btn_resume">Download
+          Resume</a>
       </div>
 
       <a href="#about" class="scroll-down">
@@ -117,16 +118,17 @@
           <div class="about-img-glow"></div>
         </div>
         <div class="about-text reveal">
-          <h2 class="section-title" style="text-align: left; margin-left: 0; left: 0; transform: none;">About Me</h2>
-          <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+          <h2 class="section-title" style="text-align: left; margin-left: 0; left: 0; transform: none;"
+            data-i18n="about_title">About Me</h2>
+          <p style="margin-bottom: 1.5rem; color: var(--text-muted);" data-i18n="about_desc_1">
             I am a Computer Science student specializing in <strong>AI & Machine Learning</strong>. I bridge the gap
             between complex algorithms and user-friendly web applications.
           </p>
-          <p style="margin-bottom: 2rem; color: var(--text-muted);">
+          <p style="margin-bottom: 2rem; color: var(--text-muted);" data-i18n="about_desc_2">
             With a strong foundation in Python, OpenCV, and Web Technologies, I aim to create impactful solutions that
             solve real-world problems.
           </p>
-          <a href="about.html" class="btn btn-primary">More About Me</a>
+          <a href="about.html" class="btn btn-primary" data-i18n="about_btn_more">More About Me</a>
         </div>
       </div>
     </div>
@@ -135,7 +137,7 @@
   <!-- Skills Section (Marquee) -->
   <section id="skills" class="section" style="background: var(--bg-secondary); overflow: hidden;">
     <div class="container" style="max-width: 100%;">
-      <h2 class="section-title reveal">My Tech Stack</h2>
+      <h2 class="section-title reveal" data-i18n="skills_title">My Tech Stack</h2>
 
       <div class="marquee-wrapper reveal">
         <div class="marquee-content">
@@ -220,7 +222,7 @@
   <!-- Featured Projects Section -->
   <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title reveal">Featured Projects</h2>
+      <h2 class="section-title reveal" data-i18n="projects_title">Featured Projects</h2>
       <div class="projects-grid reveal">
         <!-- Project 1 -->
         <article class="project-card">
@@ -230,8 +232,9 @@
             </div>
           </div>
           <div class="project-info">
-            <h3>AI Face Recognition</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Real-time face detection system.</p>
+            <h3 data-i18n="proj_face_title">AI Face Recognition</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="proj_face_desc">Real-time face detection
+              system.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">OpenCV</span>
@@ -246,8 +249,9 @@
             </div>
           </div>
           <div class="project-info">
-            <h3>Sentiment Analysis</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">NLP based sentiment classifier.</p>
+            <h3 data-i18n="proj_sentiment_title">Sentiment Analysis</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="proj_sentiment_desc">NLP based sentiment
+              classifier.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">NLP</span>
@@ -262,8 +266,9 @@
             </div>
           </div>
           <div class="project-info">
-            <h3>Simple Calculator</h3>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Modern UI calculator with JS logic.</p>
+            <h3 data-i18n="proj_calc_title">Simple Calculator</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="proj_calc_desc">Modern UI calculator with
+              JS logic.</p>
             <div class="project-tech">
               <span class="tech-tag">JS</span>
               <span class="tech-tag">CSS</span>
@@ -272,7 +277,7 @@
         </article>
       </div>
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+        <a href="projects.html" class="btn btn-secondary" data-i18n="project_btn_all">View All Projects</a>
       </div>
     </div>
   </section>
@@ -280,12 +285,13 @@
   <!-- CTA Section -->
   <section class="section cta-section" style="background: var(--bg-secondary); text-align: center;">
     <div class="container">
-      <h2 class="reveal">Have a Project in Mind?</h2>
+      <h2 class="reveal" data-i18n="cta_title">Have a Project in Mind?</h2>
       <p class="reveal"
-        style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;"
+        data-i18n="cta_desc">
         I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
       </p>
-      <a href="contact.html" class="btn btn-primary btn-glow reveal">Let's Chat</a>
+      <a href="contact.html" class="btn btn-primary btn-glow reveal" data-i18n="cta_btn_chat">Let's Chat</a>
     </div>
   </section>
 
@@ -303,13 +309,19 @@
             class="fa-brands fa-microsoft"></i></a>
         <a href="mailto:vivekkumarc934@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
       </div>
-      <p>&copy; 2025 Vivek. Made by <i class="fa-solid fa-heart" style="color: red;"></i></p>
+      <p>&copy; 2025 <span data-i18n="footer_made_by">Vivek. Made by</span> <i class="fa-solid fa-heart"
+          style="color: red;"></i></p>
     </div>
   </footer>
 
   <!-- Floating Theme Toggle -->
   <button class="theme-toggle theme-toggle-floating" aria-label="Toggle Theme">
     <i class="fa-solid fa-sun"></i>
+  </button>
+
+  <!-- Floating Language Toggle -->
+  <button class="lang-toggle lang-toggle-floating" aria-label="Toggle Language">
+    EN
   </button>
 
   <!-- Scroll to Top -->

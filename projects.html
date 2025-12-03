@@ -89,19 +89,20 @@
             <a href="index.html" class="logo">Vivek<span>.</span></a>
             <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-                <li><a href="events.html" class="nav-link">Events</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+                <li><a href="projects.html" class="nav-link active" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link" data-i18n="nav_certifications">Certifications</a>
+                </li>
+                <li><a href="events.html" class="nav-link" data-i18n="nav_events">Events</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <section class="section" style="padding-top: 120px;">
         <div class="container">
-            <h2 class="section-title reveal">My Projects</h2>
+            <h2 class="section-title reveal" data-i18n="projects_title">My Projects</h2>
 
             <div class="filter-buttons reveal">
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -135,14 +136,16 @@
                         <div class="project-overlay">
                             <button class="btn btn-primary btn-small view-project-btn" data-title="Portfolio Website"
                                 data-desc="A responsive and modern personal portfolio designed to showcase projects, skills, and experience with a clean UI."
-                                data-tech="HTML, CSS, JavaScript" data-img="assets/images/image.png">
+                                data-tech="HTML, CSS, JavaScript" data-img="assets/images/image.png"
+                                data-i18n="project_btn_view">
                                 View Details
                             </button>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Portfolio Website</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Clean, responsive personal portfolio to
+                        <h3 data-i18n="proj_portfolio_title">Portfolio Website</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="proj_portfolio_desc">Clean,
+                            responsive personal portfolio to
                             highlight my work.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
@@ -159,13 +162,15 @@
                         <div class="project-overlay">
                             <button class="btn btn-primary btn-small view-project-btn" data-title="AI Face Recognition"
                                 data-desc="Real-time face recognition system using Python and OpenCV. Detects and identifies faces from video feed with high accuracy."
-                                data-tech="Python, OpenCV, Haar Cascades" data-img="assets/images/project3.jpg">View
+                                data-tech="Python, OpenCV, Haar Cascades" data-img="assets/images/project3.jpg"
+                                data-i18n="project_btn_view">View
                                 Details</button>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>AI Face Recognition</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Real-time face detection system.</p>
+                        <h3 data-i18n="proj_face_title">AI Face Recognition</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="proj_face_desc">Real-time
+                            face detection system.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">OpenCV</span>
@@ -179,13 +184,15 @@
                         <div class="project-overlay">
                             <button class="btn btn-primary btn-small view-project-btn" data-title="Sentiment Analysis"
                                 data-desc="NLP project to analyze sentiment of movie reviews using NLTK and Scikit-learn."
-                                data-tech="Python, NLTK, Scikit-learn" data-img="assets/images/project4.jpg">View
+                                data-tech="Python, NLTK, Scikit-learn" data-img="assets/images/project4.jpg"
+                                data-i18n="project_btn_view">View
                                 Details</button>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Sentiment Analysis</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">NLP based sentiment classifier.</p>
+                        <h3 data-i18n="proj_sentiment_title">Sentiment Analysis</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="proj_sentiment_desc">NLP
+                            based sentiment classifier.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">NLP</span>
@@ -228,13 +235,19 @@
                         class="fa-brands fa-microsoft"></i></a>
                 <a href="mailto:vivekkumarc934@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <p>&copy; 2025 Vivek. Made by <i class="fa-solid fa-heart" style="color: red;"></i></p>
+            <p>&copy; 2025 <span data-i18n="footer_made_by">Vivek. Made by</span> <i class="fa-solid fa-heart"
+                    style="color: red;"></i></p>
         </div>
     </footer>
 
     <!-- Floating Theme Toggle -->
     <button class="theme-toggle theme-toggle-floating" aria-label="Toggle Theme">
         <i class="fa-solid fa-sun"></i>
+    </button>
+
+    <!-- Floating Language Toggle -->
+    <button class="lang-toggle lang-toggle-floating" aria-label="Toggle Language">
+        EN
     </button>
 
     <div class="scroll-top"><i class="fa-solid fa-arrow-up"></i></div>

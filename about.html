@@ -50,49 +50,54 @@
             <a href="index.html" class="logo">Vivek<span>.</span></a>
             <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-                <li><a href="events.html" class="nav-link">Events</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" class="nav-link active" data-i18n="nav_about">About</a></li>
+                <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link" data-i18n="nav_certifications">Certifications</a>
+                </li>
+                <li><a href="events.html" class="nav-link" data-i18n="nav_events">Events</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="about-me-section" class="section" style="padding-top: 120px;">
         <div class="container">
-            <h2 class="section-title reveal">About Me</h2>
+            <h2 class="section-title reveal" data-i18n="about_title">About Me</h2>
 
             <div class="about-grid">
                 <div class="about-text reveal">
-                    <h3 style="margin-bottom: 2rem; color: var(--neon-blue); text-align: center;">My Journey</h3>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                    <h3 style="margin-bottom: 2rem; color: var(--neon-blue); text-align: center;"
+                        data-i18n="about_journey_title">My Journey</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-muted);" data-i18n="about_desc_1">
                         I started my journey in the world of technology with a curiosity for how things work. Currently
                         pursuing my <strong>B.Tech in Computer Science (AI & ML)</strong>, I have dived deep into the
                         realms of Data Science, Computer Vision, and Full Stack Development.
                     </p>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                    <p style="margin-bottom: 1.5rem; color: var(--text-muted);" data-i18n="about_desc_2">
                         My goal is to leverage AI to build intelligent systems that can automate tasks and provide
                         actionable insights. I am also passionate about creating seamless user experiences on the web.
                     </p>
 
                     <div class="timeline">
                         <div class="timeline-item">
-                            <div class="timeline-date">2023 - Present</div>
-                            <h4>B.Tech in CS - AIML</h4>
-                            <p style="color: var(--text-muted); font-size: 0.9rem;">Focusing on Deep Learning,
+                            <div class="timeline-date" data-i18n="timeline_1_date">2023 - Present</div>
+                            <h4 data-i18n="timeline_1_title">B.Tech in CS - AIML</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="timeline_1_desc">Focusing
+                                on Deep Learning,
                                 Algorithms, and System Design.</p>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-date">2022</div>
-                            <h4>12th with PCB</h4>
-                            <p style="color: var(--text-muted); font-size: 0.9rem;">Learned Python and SQL</p>
+                            <div class="timeline-date" data-i18n="timeline_2_date">2022</div>
+                            <h4 data-i18n="timeline_2_title">12th with PCB</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="timeline_2_desc">Learned
+                                Python and SQL</p>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-date">2021</div>
-                            <h4>10th from JNV</h4>
-                            <p style="color: var(--text-muted); font-size: 0.9rem;">passed with 77%</p>
+                            <div class="timeline-date" data-i18n="timeline_3_date">2021</div>
+                            <h4 data-i18n="timeline_3_title">10th from JNV</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="timeline_3_desc">passed
+                                with 77%</p>
                         </div>
                     </div>
                 </div>
@@ -108,70 +113,78 @@
     <!-- Skills Section -->
     <section class="section bg-card">
         <div class="container">
-            <h2 class="section-title reveal">Technical Skills</h2>
+            <h2 class="section-title reveal" data-i18n="skills_title">Technical Skills</h2>
 
             <div class="skills-container" style="margin-top: 3rem;">
                 <!-- 1. Programming Languages -->
                 <div class="skill-card reveal slide-left">
                     <i class="fa-solid fa-code skill-icon"></i>
-                    <div class="skill-name">Programming Languages</div>
-                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">Python, Java, JavaScript,
+                    <div class="skill-name" data-i18n="skill_prog_lang">Programming Languages</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;"
+                        data-i18n="skill_prog_desc">Python, Java, JavaScript,
                         C/C++, SQL, etc.</p>
                 </div>
 
                 <!-- 2. AI & Machine Learning -->
                 <div class="skill-card reveal slide-right">
                     <i class="fa-solid fa-brain skill-icon"></i>
-                    <div class="skill-name">AI & Machine Learning</div>
-                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">Machine Learning, Deep
+                    <div class="skill-name" data-i18n="skill_ai_ml">AI & Machine Learning</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;"
+                        data-i18n="skill_ai_desc">Machine Learning, Deep
                         Learning, NLP, Computer Vision, Generative AI, Model Deployment.</p>
                 </div>
 
                 <!-- 3. Frameworks & Libraries -->
                 <div class="skill-card reveal slide-left">
                     <i class="fa-solid fa-layer-group skill-icon"></i>
-                    <div class="skill-name">Frameworks & Libraries</div>
-                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">TensorFlow, PyTorch,
+                    <div class="skill-name" data-i18n="skill_frameworks">Frameworks & Libraries</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;"
+                        data-i18n="skill_frameworks_desc">TensorFlow, PyTorch,
                         Scikit-Learn, OpenCV, NumPy, Pandas, Matplotlib, face_recognition, etc.</p>
                 </div>
 
                 <!-- 4. Cloud & DevOps -->
                 <div class="skill-card reveal slide-right">
                     <i class="fa-solid fa-cloud skill-icon"></i>
-                    <div class="skill-name">Cloud & DevOps</div>
-                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">Google Cloud, Azure, AWS,
+                    <div class="skill-name" data-i18n="skill_cloud">Cloud & DevOps</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;"
+                        data-i18n="skill_cloud_desc">Google Cloud, Azure, AWS,
                         Docker, GitHub Actions, CI/CD, Linux.</p>
                 </div>
 
                 <!-- 5. Web Development -->
                 <div class="skill-card reveal slide-left">
                     <i class="fa-solid fa-globe skill-icon"></i>
-                    <div class="skill-name">Web Development</div>
-                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">HTML, CSS, JavaScript,
+                    <div class="skill-name" data-i18n="skill_web">Web Development</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;"
+                        data-i18n="skill_web_desc">HTML, CSS, JavaScript,
                         React, Node.js, REST APIs, Express.js.</p>
                 </div>
 
                 <!-- 6. Databases -->
                 <div class="skill-card reveal slide-right">
                     <i class="fa-solid fa-database skill-icon"></i>
-                    <div class="skill-name">Databases</div>
-                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">MySQL, MongoDB,
+                    <div class="skill-name" data-i18n="skill_db">Databases</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;"
+                        data-i18n="skill_db_desc">MySQL, MongoDB,
                         PostgreSQL, Firebase.</p>
                 </div>
 
                 <!-- 7. Tools & Platforms -->
                 <div class="skill-card reveal slide-left">
                     <i class="fa-solid fa-tools skill-icon"></i>
-                    <div class="skill-name">Tools & Platforms</div>
-                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">Git/GitHub, VS Code,
+                    <div class="skill-name" data-i18n="skill_tools">Tools & Platforms</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;"
+                        data-i18n="skill_tools_desc">Git/GitHub, VS Code,
                         Jupyter Notebook, Postman, Figma, Canva.</p>
                 </div>
 
                 <!-- 8. Software Engineering Concepts -->
                 <div class="skill-card reveal slide-right">
                     <i class="fa-solid fa-cogs skill-icon"></i>
-                    <div class="skill-name">Software Engineering Concepts</div>
-                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;">OOP, Data Structures &
+                    <div class="skill-name" data-i18n="skill_se">Software Engineering Concepts</div>
+                    <p class="skill-desc" style="color: var(--text-muted); font-size: 0.9rem;"
+                        data-i18n="skill_se_desc">OOP, Data Structures &
                         Algorithms, System Design basics, OS fundamentals.</p>
                 </div>
             </div>
@@ -192,13 +205,19 @@
                         class="fa-brands fa-microsoft"></i></a>
                 <a href="mailto:vivekkumarc934@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <p>&copy; 2025 Vivek. Made by <i class="fa-solid fa-heart" style="color: red;"></i></p>
+            <p>&copy; 2025 <span data-i18n="footer_made_by">Vivek. Made by</span> <i class="fa-solid fa-heart"
+                    style="color: red;"></i></p>
         </div>
     </footer>
 
     <!-- Floating Theme Toggle -->
     <button class="theme-toggle theme-toggle-floating" aria-label="Toggle Theme">
         <i class="fa-solid fa-sun"></i>
+    </button>
+
+    <!-- Floating Language Toggle -->
+    <button class="lang-toggle lang-toggle-floating" aria-label="Toggle Language">
+        EN
     </button>
 
     <div class="scroll-top"><i class="fa-solid fa-arrow-up"></i></div>
