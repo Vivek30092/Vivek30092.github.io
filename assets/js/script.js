@@ -406,10 +406,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 const desc = btn.getAttribute('data-desc');
                 const tech = btn.getAttribute('data-tech');
                 const img = btn.getAttribute('data-img');
+                const repo = btn.getAttribute('data-repo');
+                const demo = btn.getAttribute('data-demo');
 
                 document.getElementById('modalTitle').textContent = title;
                 document.getElementById('modalDesc').textContent = desc;
                 document.getElementById('modalTech').textContent = tech;
+
+                // Update buttons
+                const demoBtn = modal.querySelector('.btn-primary');
+                const repoBtn = modal.querySelector('.btn-secondary');
+
+                if (demo && demo !== '#') {
+                    demoBtn.href = demo;
+                    demoBtn.style.display = 'inline-block';
+                    demoBtn.target = '_blank';
+                } else {
+                    demoBtn.style.display = 'none';
+                }
+
+                if (repo && repo !== '#') {
+                    repoBtn.href = repo;
+                    repoBtn.style.display = 'inline-block';
+                    repoBtn.target = '_blank';
+                } else {
+                    repoBtn.style.display = 'none';
+                }
 
                 // In a real app, you'd set the image src. For now using placeholder div or if img exists
                 const imgContainer = document.querySelector('.modal-img-container');
