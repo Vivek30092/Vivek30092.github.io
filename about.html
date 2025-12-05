@@ -69,6 +69,16 @@
                 <div class="about-text reveal">
                     <h3 style="margin-bottom: 2rem; color: var(--neon-blue); text-align: center;"
                         data-i18n="about_journey_title">My Journey</h3>
+
+                    <!-- Image placed here for mobile flow, controlled by grid/flex on desktop -->
+                    <div class="about-img-container reveal mobile-only-img">
+                        <img src="assets/images/profile-placeholder.png" alt="Vivek" class="about-img">
+                        <div class="about-img-glow"></div>
+                    </div>
+
+                    <br class="mobile-break">
+                    <br class="mobile-break">
+
                     <p style="margin-bottom: 1.5rem; color: var(--text-muted);" data-i18n="about_desc_1">
                         I started my journey in the world of technology with a curiosity for how things work. Currently
                         pursuing my <strong>B.Tech in Computer Science (AI & ML)</strong>, I have dived deep into the
@@ -102,7 +112,8 @@
                     </div>
                 </div>
 
-                <div class="about-img-container reveal">
+                <!-- Desktop Image (Hidden on Mobile) -->
+                <div class="about-img-container reveal desktop-only-img">
                     <img src="assets/images/profile-placeholder.png" alt="Vivek" class="about-img">
                     <div class="about-img-glow"></div>
                 </div>
