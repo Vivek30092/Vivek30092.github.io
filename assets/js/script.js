@@ -106,11 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "skill_cloud": "Cloud & DevOps",
             "skill_cloud_desc": "Google Cloud, Azure, AWS, Docker, GitHub Actions, CI/CD, Linux.",
             "skill_web": "Web Development",
-            "skill_web_desc": "HTML, CSS, JavaScript, React, Node.js, REST APIs, Express.js.",
+            "skill_web_desc": "HTML, CSS, JavaScript",
             "skill_db": "Databases",
-            "skill_db_desc": "MySQL, MongoDB, PostgreSQL, Firebase.",
+            "skill_db_desc": "MySQL, PostgreSQL, Firebase.",
             "skill_tools": "Tools & Platforms",
-            "skill_tools_desc": "Git/GitHub, VS Code, Jupyter Notebook, Postman, Figma, Canva.",
+            "skill_tools_desc": "Git/GitHub, VS Code, Jupyter Notebook, Canva.",
             "skill_se": "Software Engineering Concepts",
             "skill_se_desc": "OOP, Data Structures & Algorithms, System Design basics, OS fundamentals."
         },
@@ -362,9 +362,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    // --- Dynamic Project Rendering ---
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (projectsGrid && typeof projectsData !== 'undefined') {
+        projectsGrid.innerHTML = projectsData.map(project => `
+            <article class="project-card" data-category="${project.category}">
+                <div class="project-img">
+                    <img src="${project.img}" alt="${project.title}">
+                    <div class="project-overlay">
+                        <button class="btn btn-primary btn-small view-project-btn" 
+                            data-title="${project.fullTitle}"
+                            data-desc="${project.fullDesc}"
+                            data-tech="${project.tech.join(', ')}" 
+                            data-img="${project.modalImg}"
+                            data-repo="${project.repo}"
+                            data-demo="${project.demo}"
+                            data-i18n="project_btn_view">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>${project.title}</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">${project.shortDesc}</p>
+                    <div class="project-tech">
+                        ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+                    </div>
+                </div>
+            </article>
+        `).join('');
+
+        // Re-apply translations for the new specific elements
+        updateLanguage(currentLang);
+    }
+
     // --- Project Filtering ---
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+    // Re-query cards after dynamic rendering
+    const getProjectCards = () => document.querySelectorAll('.project-card');
+
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -374,6 +411,8 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
+
+            const projectCards = getProjectCards();
 
             projectCards.forEach(card => {
                 if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
@@ -395,13 +434,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Project Modal ---
     const modal = document.getElementById('projectModal');
-    const viewBtns = document.querySelectorAll('.view-project-btn');
     const closeModal = document.querySelector('.close-modal');
 
     if (modal) {
-        viewBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
+        // Event Delegation for View Project Buttons
+        document.body.addEventListener('click', (e) => {
+            if (e.target.classList.contains('view-project-btn')) {
                 e.preventDefault();
+                const btn = e.target;
                 const title = btn.getAttribute('data-title');
                 const desc = btn.getAttribute('data-desc');
                 const tech = btn.getAttribute('data-tech');
@@ -433,13 +473,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     repoBtn.style.display = 'none';
                 }
 
-                // In a real app, you'd set the image src. For now using placeholder div or if img exists
+                // Update Image
                 const imgContainer = document.querySelector('.modal-img-container');
                 imgContainer.innerHTML = `<img src="${img}" alt="${title}" class="modal-img">`;
 
                 modal.style.display = 'block';
-            });
+            }
         });
+
 
         closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
